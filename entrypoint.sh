@@ -1,10 +1,11 @@
 #!/bin/sh -l
 
 # remove dupes in the case where we are deploying to amazon from our local machines
-rm -f lambda-deploy.zip
-zip -r ./lambda-deploy.zip *
+#rm -f lambda-deploy.zip
+#zip -r ./lambda-deploy.zip *
 
-sam build
+sam init --runtime python3.6
+sam build --debug
 sam package --output-template-file \
     packaged.yaml --s3-bucket "$BUCKET_NAME"
 

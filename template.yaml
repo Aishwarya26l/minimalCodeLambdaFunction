@@ -18,7 +18,7 @@ Resources:
       # if for instance, lambda_function.py in function folder, set codeUri to function/
       CodeUri: ""
       Handler: lambda_function.lambda_handler
-      Runtime: python3.6
+      Runtime: python3.7
       MemorySize: 1024
       Events:
         minimalCodeApi:
